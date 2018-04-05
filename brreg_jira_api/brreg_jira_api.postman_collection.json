@@ -1,0 +1,113 @@
+{
+	"info": {
+		"_postman_id": "e688c4b4-6c86-4811-afb8-0434fd1fa9b9",
+		"name": "Brreg jira api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://jira.brreg.no/rest/api/2/search?jql=project=BEGREP&fields=summary",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://jira.brreg.no/rest/api/2/search?orderBy=-id&jql=project=BEGREP+and+status=\"Godkjent\"+order+by+updated+desc&fields=summary,status,updated&startAt=0",
+					"protocol": "https",
+					"host": [
+						"jira",
+						"brreg",
+						"no"
+					],
+					"path": [
+						"rest",
+						"api",
+						"2",
+						"search"
+					],
+					"query": [
+						{
+							"key": "orderBy",
+							"value": "-id"
+						},
+						{
+							"key": "jql",
+							"value": "project=BEGREP+and+status=\"Godkjent\"+order+by+updated+desc"
+						},
+						{
+							"key": "fields",
+							"value": "summary,status,updated"
+						},
+						{
+							"key": "startAt",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://jira.brreg.no/rest/api/2/issue/BEGREP-44",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://jira.brreg.no/rest/api/2/issue/BEGREP-44",
+					"protocol": "https",
+					"host": [
+						"jira",
+						"brreg",
+						"no"
+					],
+					"path": [
+						"rest",
+						"api",
+						"2",
+						"issue",
+						"BEGREP-44"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "<passord>",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "<brukernavn>",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "d3bb4842-fb72-4db0-a0bd-217c6d659c64",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "cf05719c-22cc-4da4-a219-0a33ebdefc63",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
